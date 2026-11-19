@@ -1,0 +1,249 @@
+/* GENERAL */
+
+* {
+    box-sizing: border-box;
+}
+
+.dean-page {
+    width: 100%;
+    min-height: 100vh;
+    padding: 30px 35px 50px;
+    background: #292b30;
+    color: #222222;
+    font-family: Arial, sans-serif;
+}
+
+
+/* HEADER */
+
+.dean-header {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 25px 30px;
+
+    background: #ffffff;
+    border-radius: 12px;
+
+    text-align: center;
+}
+
+.dean-header h1 {
+    margin: 0 0 8px;
+    font-size: 28px;
+    letter-spacing: 4px;
+    color: #222222;
+}
+
+.dean-header p {
+    margin: 0;
+    font-size: 13px;
+    letter-spacing: 3px;
+    color: #666666;
+}
+
+
+/* MAIN CONTENT */
+
+.dean-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 30px auto 0;
+    padding: 30px;
+
+    background: #e9e9e9;
+    border-radius: 12px;
+}
+
+
+/* SECTIONS */
+
+.dean-section {
+    width: 100%;
+    margin-bottom: 25px;
+    padding: 25px;
+
+    background: #ffffff;
+    border: 1px solid #d8d8d8;
+    border-radius: 10px;
+}
+
+.dean-section:last-child {
+    margin-bottom: 0;
+}
+
+
+/* SECTION HEADER */
+
+.dean-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 25px;
+}
+
+.dean-section-header h2 {
+    margin: 0;
+    font-size: 21px;
+    color: #252525;
+}
+
+
+/* BUTTONS */
+
+.add-button {
+    padding: 11px 20px;
+
+    background: #34363b;
+    color: #ffffff;
+
+    border: none;
+    border-radius: 7px;
+
+    font-size: 13px;
+    cursor: pointer;
+
+    transition: background 0.2s ease;
+}
+
+.add-button:hover {
+    background: #505258;
+}
+
+
+/* TABLES */
+
+.groups-heading,
+.groups-row,
+.students-heading,
+.students-row,
+.lessons-heading,
+.lessons-row {
+    display: grid;
+    align-items: center;
+    text-align: left;
+
+    width: 100%;
+}
+
+.groups-heading,
+.groups-row {
+    grid-template-columns: 1fr 1.5fr 1fr 1fr;
+}
+
+.students-heading,
+.students-row {
+    grid-template-columns: 1fr 1.5fr 1fr 1fr;
+}
+
+.lessons-heading,
+.lessons-row {
+    grid-template-columns: 1fr 1.5fr 1.5fr 1fr 1fr;
+}
+
+
+/* TABLE HEADINGS */
+
+.groups-heading,
+.students-heading,
+.lessons-heading {
+    min-height: 55px;
+    padding: 15px 20px;
+
+    background: #e8e8e8;
+    border-radius: 7px;
+
+    color: #333333;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+/* TABLE ROWS */
+
+.groups-row,
+.students-row,
+.lessons-row {
+    min-height: 65px;
+    padding: 15px 20px;
+
+    background: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+
+    color: #555555;
+    font-size: 14px;
+}
+
+.groups-row:last-child,
+.students-row:last-child,
+.lessons-row:last-child {
+    border-bottom: none;
+}
+
+
+/* FILTERS */
+
+.students-filter,
+.lessons-filter {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    margin-bottom: 20px;
+}
+
+.students-filter label,
+.lessons-filter label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333333;
+}
+
+.students-filter select,
+.lessons-filter select {
+    min-width: 200px;
+    padding: 10px 14px;
+
+    background: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+
+    color: #333333;
+    font-size: 13px;
+    outline: none;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    .dean-page {
+        padding: 15px;
+    }
+
+    .dean-content {
+        padding: 15px;
+        margin-top: 20px;
+    }
+
+    .dean-section {
+        padding: 18px;
+        overflow-x: auto;
+    }
+
+    .dean-section-header {
+        gap: 15px;
+        align-items: flex-start;
+    }
+
+    .dean-section-header h2 {
+        font-size: 17px;
+    }
+
+    .groups-table,
+    .students-table,
+    .lessons-table {
+        min-width: 600px;
+    }
+}

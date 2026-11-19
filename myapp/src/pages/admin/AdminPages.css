@@ -1,0 +1,213 @@
+/* GENERAL */
+
+* {
+    box-sizing: border-box;
+}
+
+.admin-page {
+    width: 100%;
+    min-height: 100vh;
+    padding: 30px 35px 50px;
+
+    background: #f3f3f3;
+
+    font-family: Arial, sans-serif;
+    color: #222222;
+}
+
+/* HEADER */
+
+.admin-header {
+    max-width: 1200px;
+    margin: 0 auto 35px;
+    padding: 25px 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: #ffffff;
+    border-radius: 18px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+}
+
+.admin-header h1 {
+    margin: 0;
+    font-size: 27px;
+    letter-spacing: 4px;
+    color: #171717;
+}
+
+.admin-header p {
+    margin: 0;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: #777777;
+}
+
+/* MAIN CONTENT */
+
+.admin-content {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* SECTION CARDS */
+
+.deans-section,
+.time-slots-section {
+    padding: 30px;
+
+    background: #ffffff;
+    border-radius: 20px;
+
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.07);
+}
+
+/* SECTION HEADER */
+
+.admin-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 25px;
+}
+
+.admin-section-header h2 {
+    margin: 0;
+    font-size: 23px;
+    color: #222222;
+}
+
+/* BUTTONS */
+
+.add-button {
+    padding: 12px 20px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #252525;
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.add-button:hover {
+    background: #444444;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* DEANS */
+
+.deans-content > p {
+    margin: 0 0 18px;
+    color: #777777;
+    font-size: 14px;
+}
+
+.deans-list {
+    min-height: 130px;
+    padding: 20px;
+
+    background: #f5f5f5;
+    border-radius: 12px;
+}
+
+.deans-input:focus {
+    border-color: #888888;
+}
+
+.deans-input::placeholder {
+    color: #999999;
+}
+
+.empty-message {
+    padding: 25px;
+    text-align: center;
+    color: #888888;
+    font-size: 14px;
+}
+
+/* TIME SLOTS TABLE */
+
+.time-slots-table {
+    width: 100%;
+}
+
+.time-slots-heading {
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr 1.5fr 1fr;
+
+    padding: 18px 20px;
+
+    background: #eeeeee;
+    border-radius: 10px;
+
+    font-size: 13px;
+    font-weight: bold;
+    color: #333333;
+}
+
+.time-slots-row {
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr 1.5fr 1fr;
+    min-height: 70%;
+    width: 100%;
+    margin-top: 10px;
+    background-color: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+}
+
+.time-slots-row span {
+    padding: 15px 20px;
+    border-right: 1px solid #eeeeee;
+}
+
+.time-slots-row span:last-child {
+    border-right: none;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    .admin-page {
+        padding: 15px;
+    }
+
+    .admin-header {
+        padding: 20px;
+    }
+
+    .deans-section,
+    .time-slots-section {
+        padding: 20px;
+    }
+
+    .admin-section-header {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .time-slots-table {
+        overflow-x: auto;
+    }
+
+    .time-slots-heading {
+        min-width: 550px;
+    }
+}

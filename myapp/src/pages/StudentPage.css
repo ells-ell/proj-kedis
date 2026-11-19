@@ -1,0 +1,191 @@
+/* GENERAL */
+
+* {
+    box-sizing: border-box;
+}
+
+.student-page {
+    width: 100%;
+    min-height: 100vh;
+    padding: 30px 35px 50px;
+    background: #292b30;
+    color: #252525;
+    font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+
+.welcom-header {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 25px 30px;
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: none;
+    text-align: center;
+}
+
+.welcom-header h1 {
+    margin: 0;
+    font-size: 25px;
+    letter-spacing: 3px;
+    color: #252525;
+}
+
+/* MAIN CONTENT */
+
+.student-content {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1200px;
+    min-height: 0;
+    margin: 35px auto 0;
+    padding: 35px 35px 170px;
+    background: #e9e9e9;
+    border-radius: 25px;
+}
+
+/* DECORATIVE CIRCLES */
+
+.student-content::before,
+.student-content::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    filter: blur(25px);
+}
+
+.student-content::before {
+    width: 190px;
+    height: 190px;
+    left: 10%;
+    bottom: 15px;
+    background: rgba(45, 47, 52, 0.15);
+}
+
+.student-content::after {
+    width: 230px;
+    height: 230px;
+    right: 10%;
+    bottom: 5px;
+    background: rgba(90, 92, 98, 0.12);
+}
+
+/* KEDIS PANEL */
+
+.kedis-section {
+    position: relative;
+    z-index: 1;
+    min-height: 150px;
+    padding: 30px 35px;
+    margin-bottom: 30px;
+    background: #ffffff;
+    border: 1px solid #d8d8d8;
+    border-radius: 20px;
+    box-shadow: none;
+}
+
+.kedis-section h2 {
+    margin: 0 0 10px;
+    font-size: 30px;
+    letter-spacing: 4px;
+    color: #252525;
+}
+
+.kedis-section p {
+    margin: 0;
+    font-size: 13px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    color: #666666;
+}
+
+/* SCHEDULE */
+
+.schedule-section {
+    position: relative;
+    z-index: 1;
+    min-height: 420px;
+    padding: 30px;
+    background: #ffffff;
+    border: 1px solid #d8d8d8;
+    border-radius: 20px;
+    box-shadow: none;
+}
+
+.schedule-title h2 {
+    margin: 0 0 25px;
+    font-size: 23px;
+    color: #252525;
+}
+
+/* TABLE */
+
+.schadule-table,
+.table-row {
+    display: grid;
+    grid-template-columns: 0.6fr 1.5fr 1.4fr 0.8fr 1.2fr;
+    gap: 20px;
+    padding: 18px 20px;
+    align-items: center;
+    text-align: left;
+}
+
+.schadule-table {
+    background: #e8e8e8;
+    border-radius: 10px;
+    color: #333333;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.table-row {
+    min-height: 60px;
+    border-bottom: 1px solid #e5e5e5;
+    font-size: 14px;
+    color: #555555;
+    transition: background 0.25s ease;
+}
+
+.table-row:hover {
+    background: #f2f2f2;
+}
+
+.table-row:last-child {
+    border-bottom: none;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    .student-page {
+        padding: 15px;
+    }
+
+    .student-content {
+        padding: 20px 20px 150px;
+        margin-top: 25px;
+    }
+
+    .welcom-header {
+        padding: 20px;
+    }
+
+    .kedis-section {
+        padding: 25px;
+    }
+
+    .schedule-section {
+        overflow-x: auto;
+        padding: 18px;
+    }
+
+    .schadule-table,
+    .table-row {
+        min-width: 650px;
+        gap: 20px;
+    }
+}
